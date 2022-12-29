@@ -1,0 +1,571 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Mebels` categories",
+        "description": "This is mebels` api",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "email": "yurayur1990@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "MEbel api host"
+        }
+    ],
+    "paths": {
+        "/api/allmebel": {
+            "get": {
+                "tags": [
+                    "AllMebel"
+                ],
+                "summary": "Get all mebels` items",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getAllData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/allmebel/show/{id}": {
+            "get": {
+                "tags": [
+                    "AllMebel"
+                ],
+                "summary": "Detailed info about the mebel item",
+                "operationId": "editAllData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/softmebel": {
+            "get": {
+                "tags": [
+                    "AllSoftMebel"
+                ],
+                "summary": "Get all mebels` items",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getSoftData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/softmebel/edit/{id}": {
+            "get": {
+                "tags": [
+                    "AllSoftMebel"
+                ],
+                "summary": "Detailed info about the mebel item",
+                "operationId": "editSoft",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/homemebel": {
+            "get": {
+                "tags": [
+                    "HomeMebel"
+                ],
+                "summary": "Get all mebels` items",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getHometData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/homemebel/edit/{id}": {
+            "get": {
+                "tags": [
+                    "HomeMebel"
+                ],
+                "summary": "Detailed info about the mebel item",
+                "operationId": "editHome",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/kitchenmebel": {
+            "get": {
+                "tags": [
+                    "Kitchen"
+                ],
+                "summary": "Get all mebels` items",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getKitchenData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/kitchenmebel/edit/{id}": {
+            "get": {
+                "tags": [
+                    "Kitchen"
+                ],
+                "summary": "Detailed info about the mebel item",
+                "operationId": "editKitchen",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/loftmebel": {
+            "get": {
+                "tags": [
+                    "LoftMebel"
+                ],
+                "summary": "Get all mebels` items",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getLoftData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/loftmebel/edit/{id}": {
+            "get": {
+                "tags": [
+                    "LoftMebel"
+                ],
+                "summary": "Detailed info about the mebel item",
+                "operationId": "editLoft",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/mebel": {
+            "get": {
+                "tags": [
+                    "Office Mebels"
+                ],
+                "summary": "Get all mebels` items",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Office Mebels"
+                ],
+                "summary": "Place an order for a mebel",
+                "operationId": "store",
+                "requestBody": {
+                    "description": "Input data format",
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "name_uz": {
+                                        "description": "Name the bebel type",
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "description": "User",
+                                        "type": "string"
+                                    },
+                                    "name_ru": {
+                                        "description": "Name the bebel type",
+                                        "type": "string"
+                                    },
+                                    "size": {
+                                        "description": "Give the size to the mebel",
+                                        "type": "string"
+                                    },
+                                    "material": {
+                                        "description": "Give the material name",
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "description": "Give a price for the mebel",
+                                        "type": "string"
+                                    },
+                                    "image": {
+                                        "description": "Chose an image",
+                                        "type": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/mebel/show/{id}": {
+            "get": {
+                "tags": [
+                    "Office Mebels"
+                ],
+                "summary": "Detailed info about the mebel item",
+                "operationId": "edit",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/mebel/{id}/update/": {
+            "put": {
+                "tags": [
+                    "Office Mebels"
+                ],
+                "summary": "Update the data",
+                "operationId": "updateData",
+                "parameters": [
+                    {
+                        "name": "Accept-Language",
+                        "in": "header",
+                        "description": "Set language parameter by RFC2616 <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4>",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Input data format",
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "name_uz": {
+                                        "description": "Name the bebel type",
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "description": "User",
+                                        "type": "string"
+                                    },
+                                    "name_ru": {
+                                        "description": "Name the bebel type",
+                                        "type": "string"
+                                    },
+                                    "size": {
+                                        "description": "Give the size to the mebel",
+                                        "type": "string"
+                                    },
+                                    "material": {
+                                        "description": "Give the material name",
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "description": "Give a price for the mebel",
+                                        "type": "string"
+                                    },
+                                    "image": {
+                                        "description": "Chose an image",
+                                        "type": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "Find out more about Swagger",
+        "url": "http://swagger.io"
+    }
+}
